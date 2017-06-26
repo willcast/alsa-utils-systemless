@@ -27,7 +27,7 @@
 
 # This will be the folder name under /magisk
 # This should also be the same as the id in your module.prop to prevent confusion
-MODID=template
+MODID=alsa-utils-systemless
 
 # Set to true if you need to enable Magic Mount
 # Most mods would like it to be enabled
@@ -49,9 +49,9 @@ LATESTARTSERVICE=false
 # Set what you want to show when installing your mod
 
 print_modname() {
-  ui_print "*******************************"
-  ui_print "     Magisk Module Template    "
-  ui_print "*******************************"
+  ui_print "***************************************"
+  ui_print "     alsa-tools systemless package"
+  ui_print "***************************************"
 }
 
 ##########################################################################################
@@ -65,7 +65,7 @@ print_modname() {
 # You don't need to remove the example below, these values will be overwritten by your own list
 # This is an example
 REPLACE="
-/system/app/Youtube
+/system/app/Yout
 /system/priv-app/SystemUI
 /system/priv-app/Settings
 /system/framework
@@ -88,6 +88,7 @@ set_permissions() {
 
   # Only some special files require specific permissions
   # The default permissions should be good enough for most cases
+  set_perm_recursive  $MODPATH/system/xbin 0 0 0755 0755
 
   # Some templates if you have no idea what to do:
 

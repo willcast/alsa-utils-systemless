@@ -1,7 +1,7 @@
-id=template
-name=Template Module
-version=v1
+id=alsa-tools-systemless
+name=systemless alsa-utils
+version=1
 versionCode=1
-author=topjohnwu
-description=A short description
+author=willcast
+description=Systemless version of the alsa-utils files that the AlsaMixer app needs to function.
 template=3
